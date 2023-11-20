@@ -12,7 +12,7 @@
     "react-to-webcomponent": "^2.0.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "/r2wc-checklist/",
+  "homepage": "/web_component/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
