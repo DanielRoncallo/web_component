@@ -5,12 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Input from "./component/input";
 import reactToWebComponent from "react-to-webcomponent";
-/* const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-); */
+import ColorChangingButton from "./component/button";
+
 const wcInput = reactToWebComponent(Input, React, ReactDOM, {
   dashStyleAttributes: true,
   props: {
@@ -21,7 +17,10 @@ const wcInput = reactToWebComponent(Input, React, ReactDOM, {
 });
 customElements.define("r2wc-input", wcInput);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const btnColor = reactToWebComponent(ColorChangingButton, React, ReactDOM, {
+  dashStyleAttributes: true,
+  props: {},
+});
+customElements.define("r2wc-btn", btnColor);
+
 reportWebVitals();
